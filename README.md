@@ -39,7 +39,7 @@ CREATE TABLE ar_user (
 ## 配置数据源
 ar4j使用ArConfig对象保存数据库配置信息。
 ```text
-    final String url = "jdbc:mysql://127.0.0.1:3306/appcpa";
+    final String url = "jdbc:mysql://127.0.0.1:3306/ar_test";
     final String username = "root";
     final String password = "root";
         
@@ -91,8 +91,7 @@ arUserService.batchSave(records);
 在Model中封装了一些简单的查询方法，可以直接拿过来使用：
 ```text
 ArUser arUserService = new ArUser();
-List<ArUser> list = 
-            arUserService.find("select * from " + arUserService.getTableName());
+List<ArUser> list = arUserService.find("select * from " + arUserService.getTableName());
 ```
 还有根据主键获取记录的findByPrimaryKey()以及获取第一条记录的findFirst()方法。
 ar4j对于in查询的也有些不足，当前只是在Model.class类提供了buildInClause()方法来构建in语句。
