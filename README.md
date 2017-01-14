@@ -1,5 +1,5 @@
 # 简介
-ar4j是一个Java版的ActiveRecord实现。可以非常自由地操作数据库。特色如下：
+ar4j是一个Java版的ActiveRecord实现。可以灵活地对数据库进行操作。特色如下：
 * 零配置
 * 零依赖
 * 自定义SQL
