@@ -1,7 +1,7 @@
 package com.zhyea.ar4j.core;
 
 
-import com.zhyea.ar4j.core.datasource.IDataSourcePlugin;
+import com.zhyea.ar4j.core.datasource.DataSourcePlugin;
 import com.zhyea.ar4j.core.dialect.Dialect;
 import com.zhyea.ar4j.core.exception.ArConfigException;
 
@@ -18,13 +18,13 @@ public class ArConfig {
 
     private String id;
 
-    private IDataSourcePlugin dsp;
+    private DataSourcePlugin dsp;
 
     private Dialect dialect;
 
     private Map<Class<? extends Model>, Table> tables = new HashMap<Class<? extends Model>, Table>();
 
-    public ArConfig(String id, IDataSourcePlugin dsp, Dialect dialect) {
+    public ArConfig(String id, DataSourcePlugin dsp, Dialect dialect) {
         if (isBlank(id)) {
             throw new IllegalArgumentException("id cannot be null");
         }

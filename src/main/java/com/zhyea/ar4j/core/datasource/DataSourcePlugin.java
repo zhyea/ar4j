@@ -3,7 +3,7 @@ package com.zhyea.ar4j.core.datasource;
 import javax.sql.DataSource;
 
 
-public interface IDataSourcePlugin {
+public interface DataSourcePlugin {
 
     DataSource getDataSource();
 
