@@ -25,7 +25,7 @@ CREATE TABLE ar_user (
      <dependency>
           <groupId>com.zhyea.ar4j.core</groupId>
           <artifactId>ar4j-core</artifactId>
-          <version>0.1-SNAPSHOT</version>
+          <version>0.1</version>
      </dependency>
 ```
 用户还需要自己实现Dialect和DataSourcePlugin两个接口。也可以继续引入ar4j-ext依赖，使用已有的Dialect和DataSourcePlugin实现：
@@ -33,7 +33,7 @@ CREATE TABLE ar_user (
       <dependency>
           <groupId>com.zhyea.ar4j.ext</groupId>
           <artifactId>ar4j-ext</artifactId>
-          <version>0.1-SNAPSHOT</version>
+          <version>0.1</version>
       </dependency>
 ```
 ## 配置数据源
