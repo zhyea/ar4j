@@ -39,7 +39,7 @@ CREATE TABLE ar_user (
 ## 配置数据源
 ar4j使用ArConfig对象保存数据库配置信息。
 ```text
-    final String url = "jdbc:mysql://127.0.0.1:3306/appcpa";
+    final String url = "jdbc:mysql://127.0.0.1:3306/ar_test";
     final String username = "root";
     final String password = "root";
         
@@ -67,7 +67,7 @@ config.regTable(ArUser.class, "id");
 ```text
 config.regTable(ArUser.class);
 ```
-有一块需要注意，在做分表时，也就是说如果Model类是继承的SeqModel.class，那么在注册相关的表时只需要填写表名前缀，且表名不可省略。
+有一块需要注意：做分表时，也就是说如果Model类是继承的SeqModel.class，那么在注册相关的表时只需要填写表名前缀，不过不可省略。
 ## 增删改查
 ### 执行insert
 写入数据需要创建一个新的Model实例并执行save()方法：
@@ -91,8 +91,7 @@ arUserService.batchSave(records);
 在Model中封装了一些简单的查询方法，可以直接拿过来使用：
 ```text
 ArUser arUserService = new ArUser();
-List<ArUser> list = 
-            arUserService.find("select * from " + arUserService.getTableName());
+List<ArUser> list = arUserService.find("select * from " + arUserService.getTableName());
 ```
 还有根据主键获取记录的findByPrimaryKey()以及获取第一条记录的findFirst()方法。
 ar4j对于in查询的也有些不足，当前只是在Model.class类提供了buildInClause()方法来构建in语句。
@@ -114,5 +113,5 @@ SeqModel类中提供了两个分表查询的方法：findInSeq()和findFirstInSe
 ## 缓存
 ar4j为所有的查询都提供了缓存查询方案，只需在执行时传入一个Cache对象以及一个key值。不过目前ar4j并没有提供具体的Cache实现方案，需要用户自己继承Cache接口实现。
 ## 其他
-目前ar4j只是为了适应我自己的开发工作而完成的。所以目前并不支持组合主键。其他的一些方面比如缓存、join操作、in查询也有些欠缺，需要在以后的时间里慢慢补全。
+ar4j只是为了适应我自己的开发工作而完成的。所以目前并不支持组合主键。其他的一些方面比如缓存、join操作、in查询也有些欠缺，需要在以后的时间里慢慢补全。
 
