@@ -94,7 +94,7 @@ ArUser arUserService = new ArUser();
 List<ArUser> list = arUserService.find("select * from " + arUserService.getTableName());
 ```
 还有根据主键获取记录的findByPrimaryKey()以及获取第一条记录的findFirst()方法。
-ar4j对于in查询的支持也不够，当前只是在Model.class类提供了buildInClause()方法来构建in语句。
+ar4j对于in查询的支持也不够，当前只是在Model.class类中提供了buildInClause()方法来辅助构建in语句。
 ### 执行update
 执行Model实例的set方法设置新的属性，设置完成后执行update方法可以完成更新：
 ```text
