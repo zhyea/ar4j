@@ -48,7 +48,7 @@ ar4j使用ArConfig对象保存数据库配置信息。
 ```
 配置数据源时需要指明数据源及相关的Dialect。
 ## 创建Model并注册
-一个Model类表示一个表。一个Model实现类的实例表示表中的一行记录。先来创建一个Model类：
+一个Model实现类表示一个表。一个Model实现类的实例表示表中的一行记录。先来创建一个Model类：
 ```java
 import com.zhyea.ar4j.core.Model;
 
@@ -63,11 +63,11 @@ config.regTable("ar_user", ArUser.class, "id");
 ```text
 config.regTable(ArUser.class, "id");
 ```
-此外如果表的主键名与Dialect中设置的默认主键名一致的话,主键名也是可以省略掉的：
+此外如果表的主键名与Dialect的defaultPrimaryKey()返回的默认主键名一致的话,主键名也是可以省略掉的：
 ```text
 config.regTable(ArUser.class);
 ```
-有一块需要注意：做分表时，也就是说如果Model类是继承的SeqModel.class，那么在注册相关的表时只需要填写表名前缀，不过不可省略。
+有一点需要注意：做分表时，也就是说如果Model类是继承的SeqModel.class，那么在注册相关的表时只需要填写表名前缀，不过不可省略。
 ## 增删改查
 ### 执行insert
 写入数据需要创建一个新的Model实例并执行save()方法：
@@ -76,7 +76,7 @@ new ArUser().set("username", "robin")
             .set("password", "zhyea.com")
             .set("insert_time", new Date()).save();
 ```
-执行batchSave方法可以将多个Model实例批量写入数据库：
+执行batchSave方法可以将多个Model实例批量写入数据库，但是需要额外提供一个Model实例来执行操作：
 ```text
 ArUser arUserService = new ArUser();
 List<ArUser> records = new ArrayList<>();
@@ -94,7 +94,7 @@ ArUser arUserService = new ArUser();
 List<ArUser> list = arUserService.find("select * from " + arUserService.getTableName());
 ```
 还有根据主键获取记录的findByPrimaryKey()以及获取第一条记录的findFirst()方法。
-ar4j对于in查询的也有些不足，当前只是在Model.class类提供了buildInClause()方法来构建in语句。
+ar4j对于in查询的支持也不够，当前只是在Model.class类提供了buildInClause()方法来构建in语句。
 ### 执行update
 执行Model实例的set方法设置新的属性，设置完成后执行update方法可以完成更新：
 ```text
