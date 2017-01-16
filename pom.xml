@@ -9,7 +9,7 @@
     <version>0.1</version>
     <packaging>jar</packaging>
 
-    <name>${project.groupId}:${project.artifactId}</name>
+    <name>AR4J Core</name>
     <description>ActiveRecord for java</description>
     <url>https://github.com/zhyea/ar4j-core</url>
 
