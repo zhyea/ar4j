@@ -28,7 +28,7 @@ CREATE TABLE ar_user (
           <version>0.1</version>
      </dependency>
 ```
-用户还需要自己实现Dialect和DataSourcePlugin两个接口。也可以继续引入ar4j-ext依赖，使用ar4j-ext提供的的Dialect和DataSourcePlugin接口实现类：
+用户还需要自己实现Dialect和DataSourcePlugin两个接口。也可以继续引入ar4j-ext依赖，使用ar4j-ext提供的Dialect和DataSourcePlugin接口实现类：
 ```xml
       <dependency>
           <groupId>com.zhyea.ar4j.ext</groupId>
