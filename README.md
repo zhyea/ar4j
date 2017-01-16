@@ -28,7 +28,7 @@ CREATE TABLE ar_user (
           <version>0.1</version>
      </dependency>
 ```
-在ar4j-core中没有提供Dialect和DataSourcePlugin这两个接口的具体实现，需要用户自己添加相关的实例。  
+在ar4j-core中没有提供Dialect和DataSourcePlugin这两个接口的具体实现，需要用户自己添加相关的实例。    
 用户也可以选择继续引入ar4j-ext依赖，使用ar4j-ext提供的Dialect和DataSourcePlugin接口实现以及其它的辅助类：
 ```xml
       <dependency>
