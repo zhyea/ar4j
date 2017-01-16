@@ -28,7 +28,7 @@ CREATE TABLE ar_user (
           <version>0.1</version>
      </dependency>
 ```
-用户还需要自己实现Dialect和DataSourcePlugin两个接口。也可以继续引入ar4j-ext依赖，使用已有的Dialect和DataSourcePlugin实现：
+用户还需要自己实现Dialect和DataSourcePlugin两个接口。也可以继续引入ar4j-ext依赖，使用ar4j-ext提供的的Dialect和DataSourcePlugin接口实现类：
 ```xml
       <dependency>
           <groupId>com.zhyea.ar4j.ext</groupId>
@@ -36,6 +36,7 @@ CREATE TABLE ar_user (
           <version>0.1</version>
       </dependency>
 ```
+在ar4j-ext的0.1版本中提供了MySQLDialect和一个dbcp数据库连接池实现。
 ## 配置数据源
 ar4j使用ArConfig对象保存数据库配置信息。
 ```text
