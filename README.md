@@ -107,10 +107,10 @@ user.set("update_time", new Timestamp(System.currentTimeMillis())).update();
 user.delete();
 ```
 ## 分表
-ar4j目前只支持相同表名前缀样式的分表，如ar_user_201701、ar_user_201702这样“表名前缀_年月”这样的分表。  
-要做分表时需要继承SeqModel类，并实现latestSuffix()和suffixRegex()两个方法。latestSuffix()返回的值是分表的最新的表名后缀。suffixRegex()返回的是表名后缀的正则表达式，用来匹配获取分表后全部的表。  
-在ArConfig实例中注册时需要注册表名前缀，且不可省略。如果省略了，在执行查询时就只会查询最新的表，起不到分表查询的效果。    
-SeqModel类中提供了两个分表查询的方法：findInSeq()和findFirstInSeq()，只有调用这两个方法才能起到分表查询的效果。调用其他的查询方法如果find()和findFirst()会默认只查询最新的表。  
+ar4j目前只支持相同表名前缀样式的分表，如ar_user_201701、ar_user_201702这样“表名前缀\_年月”这样的分表。  
+要做分表时需要继承SeqModel类，并实现latestSuffix()和suffixRegex()两个方法。latestSuffix()返回的值是分表的最新的表名后缀。suffixRegex()返回的是表名后缀的正则表达式，用来匹配获取分表后全部的表。    
+在ArConfig实例中注册时需要注册表名前缀，且不可省略。如果省略了，在执行查询时就只会查询最新的表，起不到分表查询的效果。   
+SeqModel类中提供了两个分表查询的方法：findInSeq()和findFirstInSeq()，只有调用这两个方法才能起到分表查询的效果。调用其他的查询方法如果find()和findFirst()会默认只查询最新的表。   
 ## 缓存
 ar4j为所有的查询都提供了缓存查询方案，只需在执行时传入一个Cache对象以及一个key值。不过目前ar4j并没有提供具体的Cache实现方案，需要用户自己继承Cache接口实现。
 ## 其他
