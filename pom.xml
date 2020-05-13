@@ -12,7 +12,7 @@
 
     <groupId>org.chobit.ar4j</groupId>
     <artifactId>ar4j-core</artifactId>
-    <version>0.1</version>
+    <version>0.1.1</version>
     <packaging>jar</packaging>
 
     <name>AR4J Core</name>

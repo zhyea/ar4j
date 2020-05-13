@@ -13,7 +13,7 @@ import java.util.Date;
 /**
  * Model类，封装了一系列对表的操作方法
  *
- * @param <M>
+ * @param <M> 子类类型
  */
 public abstract class Model<M extends Model> {
 

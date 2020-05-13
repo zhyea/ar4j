@@ -25,7 +25,7 @@ CREATE TABLE ar_user (
      <dependency>
           <groupId>org.chobit.ar4j</groupId>
           <artifactId>ar4j-core</artifactId>
-          <version>0.1</version>
+          <version>0.1.1</version>
      </dependency>
 ```
 在ar4j-core中没有提供Dialect和DataSourcePlugin这两个接口的具体实现，需要用户自己添加相关的实例。    
@@ -35,7 +35,7 @@ CREATE TABLE ar_user (
       <dependency>
           <groupId>org.chobit.ar4j</groupId>
           <artifactId>ar4j-ext</artifactId>
-          <version>0.1</version>
+          <version>0.1.1</version>
       </dependency>
 ```
 在ar4j-ext的0.1版本中提供了MySQLDialect和一个dbcp数据库连接池实现。
