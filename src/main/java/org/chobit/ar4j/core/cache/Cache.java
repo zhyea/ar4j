@@ -1,4 +1,4 @@
-package com.zhyea.ar4j.core.cache;
+package org.chobit.ar4j.core.cache;
 
 public interface Cache {
 

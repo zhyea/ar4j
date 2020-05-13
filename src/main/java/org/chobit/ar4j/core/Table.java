@@ -1,4 +1,4 @@
-package com.zhyea.ar4j.core;
+package org.chobit.ar4j.core;
 
 import java.util.HashMap;
 import java.util.Map;

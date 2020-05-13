@@ -1,7 +1,7 @@
-package com.zhyea.ar4j.core.exception;
+package org.chobit.ar4j.core.exception;
 
 
-import com.zhyea.ar4j.core.Model;
+import org.chobit.ar4j.core.Model;
 
 public class TableNotFoundException extends RuntimeException {
 

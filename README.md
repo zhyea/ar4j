@@ -23,7 +23,7 @@ CREATE TABLE ar_user (
 在pom中添加如下依赖：
 ```xml
      <dependency>
-          <groupId>com.zhyea.ar4j.core</groupId>
+          <groupId>org.chobit.ar4j</groupId>
           <artifactId>ar4j-core</artifactId>
           <version>0.1</version>
      </dependency>
@@ -33,7 +33,7 @@ CREATE TABLE ar_user (
 用户也可以选择继续引入ar4j-ext依赖，使用ar4j-ext提供的Dialect和DataSourcePlugin接口实现以及其它的辅助类：
 ```xml
       <dependency>
-          <groupId>com.zhyea.ar4j.ext</groupId>
+          <groupId>org.chobit.ar4j</groupId>
           <artifactId>ar4j-ext</artifactId>
           <version>0.1</version>
       </dependency>
@@ -53,7 +53,7 @@ ar4j使用ArConfig对象保存数据库配置信息。
 ## 创建Model并注册
 一个Model实现类表示一个表。一个Model实现类的实例表示表中的一行记录。先来创建一个Model类：
 ```java
-import com.zhyea.ar4j.core.Model;
+import org.chobit.ar4j.core.Model;
 
 public class ArUser extends Model<ArUser> {
 }

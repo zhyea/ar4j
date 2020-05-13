@@ -1,4 +1,4 @@
-package com.zhyea.ar4j.core.dialect;
+package org.chobit.ar4j.core.dialect;
 
 
 public interface Dialect {

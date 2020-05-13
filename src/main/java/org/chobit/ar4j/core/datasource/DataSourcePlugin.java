@@ -1,4 +1,4 @@
-package com.zhyea.ar4j.core.datasource;
+package org.chobit.ar4j.core.datasource;
 
 import javax.sql.DataSource;
 

@@ -1,4 +1,4 @@
-package com.zhyea.ar4j.core.exception;
+package org.chobit.ar4j.core.exception;
 
 public class ArConfigException extends RuntimeException {
 

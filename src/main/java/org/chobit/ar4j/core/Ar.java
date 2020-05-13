@@ -1,11 +1,11 @@
-package com.zhyea.ar4j.core;
+package org.chobit.ar4j.core;
 
 
-import com.zhyea.ar4j.core.dialect.Dialect;
-import com.zhyea.ar4j.core.exception.ArConfigException;
-import com.zhyea.ar4j.core.exception.DataSourceNotFoundException;
-import com.zhyea.ar4j.core.exception.ModelUnRegisterException;
-import com.zhyea.ar4j.core.exception.TableNotFoundException;
+import org.chobit.ar4j.core.dialect.Dialect;
+import org.chobit.ar4j.core.exception.ArConfigException;
+import org.chobit.ar4j.core.exception.DataSourceNotFoundException;
+import org.chobit.ar4j.core.exception.ModelUnRegisterException;
+import org.chobit.ar4j.core.exception.TableNotFoundException;
 
 import javax.sql.DataSource;
 import java.sql.Connection;

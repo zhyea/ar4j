@@ -1,9 +1,9 @@
-package com.zhyea.ar4j.core;
+package org.chobit.ar4j.core;
 
 
-import com.zhyea.ar4j.core.datasource.DataSourcePlugin;
-import com.zhyea.ar4j.core.dialect.Dialect;
-import com.zhyea.ar4j.core.exception.ArConfigException;
+import org.chobit.ar4j.core.datasource.DataSourcePlugin;
+import org.chobit.ar4j.core.dialect.Dialect;
+import org.chobit.ar4j.core.exception.ArConfigException;
 
 import javax.sql.DataSource;
 import java.lang.reflect.Modifier;
