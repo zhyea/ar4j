@@ -11,6 +11,8 @@ import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.chobit.ar4j.core.tools.Strings.isBlank;
+
 /**
  * 配置类，用于维护DataSource、Dialect、Table和Model类的正向关系
  */
@@ -127,16 +129,4 @@ public class ArConfig {
         return s;
     }
 
-    private static boolean isBlank(String str) {
-        int strLen;
-        if (str == null || (strLen = str.length()) == 0) {
-            return true;
-        }
-        for (int i = 0; i < strLen; i++) {
-            if (!Character.isWhitespace(str.charAt(i))) {
-                return false;
-            }
-        }
-        return true;
-    }
 }
